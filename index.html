@@ -3,43 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIMIAR3 - KAIROS | Missão Aeroespacial</title>
+    <title>LIMIAR3 - KAIROS</title>
     <style>
-        /* Estilo Base */
-        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; }
+        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
         
-        /* Cabeçalho com Logótipo CATI */
-        header { 
-            background: #161b22; 
-            padding: 30px 20px; 
-            text-align: center; 
-            border-bottom: 2px solid #58a6ff; 
-        }
-        .logo-cati { max-height: 70px; margin-bottom: 15px; }
-        h1 { color: #58a6ff; margin: 0; font-size: 2em; letter-spacing: 2px; }
+        /* Cabeçalho apenas com o Logo do CATI */
+        header { background: #161b22; padding: 20px; border-bottom: 2px solid #58a6ff; }
+        .logo-cati { max-height: 80px; width: auto; }
 
-        /* Navegação */
-        nav { position: sticky; top: 0; background: #161b22; padding: 15px; text-align: center; border-bottom: 1px solid #30363d; z-index: 1000; }
-        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-size: 0.9em; text-transform: uppercase; }
+        /* Menu de Navegação */
+        nav { position: sticky; top: 0; background: #161b22; padding: 15px; border-bottom: 1px solid #30363d; z-index: 1000; }
+        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; }
         nav a:hover { color: #58a6ff; }
 
-        /* Imagem de Destaque LIMIAR3 (Abaixo do Menu) */
-        .hero-image-container { width: 100%; text-align: center; background: #0d1117; padding: 20px 0; }
-        .hero-image { max-width: 80%; border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        /* Imagem LIMIAR3 - LOGO ABAIXO DO MENU */
+        .banner-container { width: 100%; background: #0d1117; padding: 0; line-height: 0; }
+        .img-limiar { 
+            width: 100%; 
+            max-width: 1200px; /* Ajusta ao tamanho que quiseres */
+            height: auto;
+            border-bottom: 1px solid #30363d;
+        }
 
-        /* Secções */
-        section { padding: 40px 20px; max-width: 1000px; margin: auto; border-bottom: 1px solid #30363d; }
-        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; text-transform: uppercase; }
-        
-        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; margin-top: 10px; }
-        footer { text-align: center; padding: 30px; color: #8b949e; font-size: 0.8em; }
+        section { padding: 40px 20px; max-width: 900px; margin: auto; text-align: left; }
+        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; }
+        footer { padding: 40px; color: #8b949e; font-size: 0.8em; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="img/cati_logo.png" alt="Logótipo CATI" class="logo-cati">
-    <h1>LIMIAR3 - KAIROS</h1>
+    <img src="img/logo_cati.png" alt="CATI" class="logo-cati">
 </header>
 
 <nav>
@@ -49,30 +44,27 @@
     <a href="#dados">Dados</a>
 </nav>
 
-<div class="hero-image-container">
-    <img src="img/limiar3_logo_v2.jpg" alt="Missão LIMIAR3 KAIROS" class="hero-image">
+<div class="banner-container">
+    <img src="img/limiar3_banner.jpg" alt="Missão LIMIAR3" class="img-limiar">
 </div>
 
 <section id="noticias">
     <h2>Notícias</h2>
     <div class="card">
-        <p><strong>Atualização:</strong> Interface visual ajustada com logótipos institucionais e da missão.</p>
+        <p><strong>Status:</strong> Site atualizado com a nova hierarquia visual.</p>
     </div>
 </section>
 
 <section id="missao">
     <h2>A Missão</h2>
-    <p>O projeto <strong>LIMIAR3 - KAIROS</strong> foca-se na monitorização atmosférica e validação de hardware em ambientes de altitude extrema.</p>
-</section>
-
-<section id="testes">
-    <h2>Estado dos Testes</h2>
-    <div class="card">
-        <p>📡 Telemetria: <b>Em fase de configuração</b></p>
-        <p>🔋 Bateria: <b>Aguardando teste de descarga</b></p>
-    </div>
+    <p>Detalhes sobre a Limiar 3 - Kairos...</p>
 </section>
 
 <footer>
-    &copy; 2024 Missão LIMIAR3 - KAIROS | CATI
+    &copy; 2026 Missão LIMIAR3 - KAIROS | CATI
+</footer>
+
+</body>
+</html>
+    &copy; 2026 Missão LIMIAR3 - KAIROS | CATI
 </footer>
