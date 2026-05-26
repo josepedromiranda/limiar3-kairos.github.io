@@ -3,38 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIMIAR3 - KAIROS</title>
+    <title>LIMIAR3 - KAIROS | Missão Aeroespacial</title>
     <style>
         body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
         
-        /* Cabeçalho apenas com o Logo do CATI */
+        /* Cabeçalho - Logo CATI */
         header { background: #161b22; padding: 20px; border-bottom: 2px solid #58a6ff; }
-        .logo-cati { max-height: 80px; width: auto; }
+        .logo-cati { max-height: 80px; height: auto; }
 
         /* Menu de Navegação */
         nav { position: sticky; top: 0; background: #161b22; padding: 15px; border-bottom: 1px solid #30363d; z-index: 1000; }
-        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; }
+        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
         nav a:hover { color: #58a6ff; }
 
-        /* Imagem LIMIAR3 - LOGO ABAIXO DO MENU */
-        .banner-container { width: 100%; background: #0d1117; padding: 0; line-height: 0; }
-        .img-limiar { 
+        /* Banner Limiar 3 - ABAIXO DO MENU */
+        .banner-container { 
             width: 100%; 
-            max-width: 1200px; /* Ajusta ao tamanho que quiseres */
-            height: auto;
-            border-bottom: 1px solid #30363d;
+            background: #0d1117; 
+            padding: 20px 0; 
+            display: flex;
+            justify-content: center;
+        }
+        .img-limiar { 
+            width: 90%; 
+            max-width: 800px; /* Impede que a imagem fique gigante no PC */
+            height: auto; 
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
         }
 
-        section { padding: 40px 20px; max-width: 900px; margin: auto; text-align: left; }
-        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; }
-        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; }
-        footer { padding: 40px; color: #8b949e; font-size: 0.8em; }
+        /* Secções de Conteúdo */
+        section { padding: 40px 20px; max-width: 800px; margin: auto; text-align: left; }
+        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; margin-bottom: 20px; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        
+        footer { padding: 40px; color: #8b949e; font-size: 0.8em; border-top: 1px solid #30363d; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="img/logo_cati.png" alt="CATI" class="logo-cati">
+    <img src="img/cati_logo.png" alt="CATI Logo" class="logo-cati">
+    <h1 style="margin-top:10px; font-size: 1.5em; color: #58a6ff;">LIMIAR3 - KAIROS</h1>
 </header>
 
 <nav>
@@ -49,19 +59,19 @@
 </div>
 
 <section id="noticias">
-    <h2>Notícias</h2>
+    <h2>Notícias da Missão</h2>
     <div class="card">
-        <p><strong>Status:</strong> Site atualizado com a nova hierarquia visual.</p>
+        <p><strong>[Site Atualizado]</strong> - Identidade visual consolidada e integração de telemetria em curso.</p>
     </div>
 </section>
 
 <section id="missao">
     <h2>A Missão</h2>
-    <p>Detalhes sobre a Limiar 3 - Kairos...</p>
+    <p>O projeto LIMIAR3 - KAIROS visa a exploração da estratosfera para recolha de dados científicos críticos.</p>
 </section>
 
 <footer>
-    &copy; 2026 Missão LIMIAR3 - KAIROS | CATI
+    &copy; 2024 Missão LIMIAR3 - KAIROS | CATI
 </footer>
 
 </body>
