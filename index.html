@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIMIAR3 - KAIROS | Missão Aeroespacial</title>
+    <style>
+        /* Estilo Base - Tema Escuro Tecnológico */
+        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; }
+        header { background: linear-gradient(135deg, #161b22 0%, #0d1117 100%); padding: 60px 20px; text-align: center; border-bottom: 2px solid #58a6ff; }
+        h1 { color: #58a6ff; margin: 0; font-size: 2.5em; letter-spacing: 3px; }
+        .subtitle { color: #8b949e; font-size: 1.1em; }
+        
+        /* Navegação */
+        nav { position: sticky; top: 0; background: #161b22; padding: 15px; text-align: center; border-bottom: 1px solid #30363d; z-index: 1000; }
+        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-size: 0.9em; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: #58a6ff; }
+
+        /* Secções */
+        section { padding: 60px 20px; max-width: 1000px; margin: auto; border-bottom: 1px solid #30363d; }
+        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; text-transform: uppercase; }
+        
+        /* Cartões e Caixas */
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; margin-bottom: 20px; }
+        .status { font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; }
+        .done { background: #238636; color: white; }
+        .pending { background: #9e6a03; color: white; }
+        
+        /* Gráficos e Imagens */
+        .placeholder-box { background: #0d1117; border: 2px dashed #30363d; height: 300px; display: flex; align-items: center; justify-content: center; color: #8b949e; text-align: center; }
+        
+        footer { text-align: center; padding: 40px; color: #8b949e; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LIMIAR3 - KAIROS</h1>
+    <p class="subtitle">Projeto de Exploração Estratosférica e Telemetria</p>
+</header>
+
+<nav>
+    <a href="#noticias">Notícias</a>
+    <a href="#missao">Missão</a>
+    <a href="#desenvolvimento">Desenvolvimento</a>
+    <a href="#testes">Testes</a>
+    <a href="#lancamento">Lançamento</a>
+    <a href="#dados">Dados</a>
+</nav>
+
+<section id="noticias">
+    <h2>Notícias</h2>
+    <div class="card">
+        <p><strong>2024-05-26:</strong> Site oficial da missão entra em funcionamento via GitHub Pages. Estrutura de comunicação estabelecida.</p>
+    </div>
+    <p><i>Mais notícias serão publicadas à medida que a missão avança.</i></p>
+</section>
+
+<section id="missao">
+    <h2>Missão</h2>
+    <p><strong>Resumo:</strong> A missão LIMIAR3 - KAIROS visa o lançamento de uma sonda para recolha de dados científicos na camada limiar da atmosfera.</p>
+    <div class="card">
+        <h3>Objetivos:</h3>
+        <ul>
+            <li>Monitorização de radiação UV e cósmica.</li>
+            <li>Registo de variação de pressão e temperatura em altitude.</li>
+            <li>Teste de resiliência de componentes eletrónicos em condições extremas.</li>
+        </ul>
+        <h3>Requisitos:</h3>
+        <p>Recuperação do payload com integridade de dados e conformidade com as normas de segurança aérea.</p>
+    </div>
+</section>
+
+<section id="desenvolvimento">
+    <h2>Desenvolvimento</h2>
+    <div class="card">
+        <p><strong>Payload:</strong> Descrição da estrutura física e proteção térmica.</p>
+        <p><strong>Eletrónica:</strong> Descrição dos microcontroladores (ex: Arduino/ESP32).</p>
+        <p><strong>Sensores:</strong> Listagem de sensores integrados (Pressão, Humidade, GPS, etc).</p>
+        <p><strong>Montagem:</strong> Registo das fases de integração dos sistemas.</p>
+    </div>
+</section>
+
+<section id="testes">
+    <h2>Testes</h2>
+    <div class="card">
+        <p><span class="status done">CONCLUÍDO</span> <strong>Conformidade Estrutural:</strong> Verificação de pesos e medidas.</p>
+        <p><span class="status pending">AGUARDANDO</span> <strong>Funcionamento Contínuo:</strong> Teste de bateria de 5 horas.</p>
+        <p><span class="status pending">AGUARDANDO</span> <strong>Teste de Frio:</strong> Simulação de temperatura estratosférica.</p>
+    </div>
+</section>
+
+<section id="lancamento">
+    <h2>Lançamento</h2>
+    <p>Informações sobre o local de lançamento, janela de tempo e links de rastreio (GPS).</p>
+    <div class="placeholder-box">
+        Fotos e links do lançamento serão inseridos aqui.
+    </div>
+</section>
+
+<section id="dados">
+    <h2>Dados da Missão</h2>
+    <p>Telemetria e análise de dados pós-voo.</p>
+    <div class="placeholder-box">
+        <p>Os gráficos do Excel/Google Sheets serão integrados aqui via <i>iframe</i> assim que os dados estiverem disponíveis.</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2024 Missão LIMIAR3 - KAIROS. Desenvolvido para fins de investigação e exploração.
+</footer>
+
+</body>
+</html>
