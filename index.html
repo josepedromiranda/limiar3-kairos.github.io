@@ -5,129 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIMIAR3 - KAIROS | Missão Aeroespacial</title>
     <style>
-        /* Estilo Base - Tema Escuro Tecnológico */
-        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; }
-        header { background: linear-gradient(135deg, #161b22 0%, #0d1117 100%); padding: 60px 20px; text-align: center; border-bottom: 2px solid #58a6ff; position: relative; }
-        h1 { color: #58a6ff; margin: 0; font-size: 2.5em; letter-spacing: 3px; position: relative; z-index: 10; }
-        .subtitle { color: #8b949e; font-size: 1.1em; position: relative; z-index: 10; }
+        /* Estilo Base */
+        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; }
         
-        /* Logótipos no Header */
-        .logo-header { position: absolute; max-height: 80px; opacity: 0.8; transition: 0.3s; z-index: 5; }
-        .logo-header:hover { opacity: 1; }
-        #logo-cati { top: 20px; left: 20px; }
-        #logo-missao { top: 20px; right: 20px; }
+        /* Cabeçalho com Logótipo CATI */
+        header { 
+            background: #161b22; 
+            padding: 30px 20px; 
+            text-align: center; 
+            border-bottom: 2px solid #58a6ff; 
+        }
+        .logo-cati { max-height: 70px; margin-bottom: 15px; }
+        h1 { color: #58a6ff; margin: 0; font-size: 2em; letter-spacing: 2px; }
 
         /* Navegação */
         nav { position: sticky; top: 0; background: #161b22; padding: 15px; text-align: center; border-bottom: 1px solid #30363d; z-index: 1000; }
-        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-size: 0.9em; text-transform: uppercase; transition: 0.3s; }
+        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-size: 0.9em; text-transform: uppercase; }
         nav a:hover { color: #58a6ff; }
 
-        /* Secções */
-        section { padding: 60px 20px; max-width: 1000px; margin: auto; border-bottom: 1px solid #30363d; }
-        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; text-transform: uppercase; margin-bottom: 30px; }
-        
-        /* Conteúdo Multimédia */
-        .media-container { display: flex; gap: 30px; align-items: flex-start; }
-        .text-content { flex: 2; }
-        .media-content { flex: 1; max-width: 300px; border-radius: 8px; border: 1px solid #30363d; padding: 10px; background: #161b22; }
-        .media-content img { width: 100%; border-radius: 5px; }
+        /* Imagem de Destaque LIMIAR3 (Abaixo do Menu) */
+        .hero-image-container { width: 100%; text-align: center; background: #0d1117; padding: 20px 0; }
+        .hero-image { max-width: 80%; border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
 
-        /* Cartões e Caixas */
-        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; margin-bottom: 20px; }
-        .status { font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; }
-        .done { background: #238636; color: white; }
-        .pending { background: #9e6a03; color: white; }
+        /* Secções */
+        section { padding: 40px 20px; max-width: 1000px; margin: auto; border-bottom: 1px solid #30363d; }
+        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; text-transform: uppercase; }
         
-        /* Gráficos e Imagens */
-        .placeholder-box { background: #0d1117; border: 2px dashed #30363d; height: 300px; display: flex; align-items: center; justify-content: center; color: #8b949e; text-align: center; }
-        
-        footer { text-align: center; padding: 40px; color: #8b949e; font-size: 0.8em; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 6px; margin-top: 10px; }
+        footer { text-align: center; padding: 30px; color: #8b949e; font-size: 0.8em; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="img/cati_logo.png" alt="Logótipo CATI" class="logo-header" id="logo-cati">
-    <img src="img/limiar3_logo_v2.jpg" alt="Missão LIMIAR3 KAIROS" class="logo-header" id="logo-missao">
-    
+    <img src="img/NOME_DO_LOGO_CATI.png" alt="Logótipo CATI" class="logo-cati">
     <h1>LIMIAR3 - KAIROS</h1>
-    <p class="subtitle">Projeto de Exploração Estratosférica e Telemetria</p>
 </header>
 
 <nav>
     <a href="#noticias">Notícias</a>
     <a href="#missao">Missão</a>
-    <a href="#desenvolvimento">Desenvolvimento</a>
     <a href="#testes">Testes</a>
-    <a href="#lancamento">Lançamento</a>
     <a href="#dados">Dados</a>
 </nav>
+
+<div class="hero-image-container">
+    <img src="img/NOME_DA_IMAGEM_LIMIAR3.jpg" alt="Missão LIMIAR3 KAIROS" class="hero-image">
+</div>
 
 <section id="noticias">
     <h2>Notícias</h2>
     <div class="card">
-        <p><strong>2024-05-26:</strong> Site oficial da missão entra em funcionamento. Identidade visual e logótipos integrados.</p>
+        <p><strong>Atualização:</strong> Interface visual ajustada com logótipos institucionais e da missão.</p>
     </div>
 </section>
 
 <section id="missao">
-    <h2>Missão</h2>
-    <div class="media-container">
-        <div class="text-content">
-            <p><strong>Resumo:</strong> A missão LIMIAR3 - KAIROS, desenvolvida em parceria com o CATI, visa o lançamento de uma sonda para recolha de dados científicos na camada limiar da atmosfera.</p>
-            <div class="card">
-                <h3>Objetivos:</h3>
-                <ul>
-                    <li>Monitorização de radiação UV e cósmica.</li>
-                    <li>Registo de variação de pressão e temperatura em altitude.</li>
-                    <li>Validação de novos sistemas de energia do CATI.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="media-content">
-            <img src="img/NOME_DO_FICHEIRO_LIMIAR3.jpg" alt="Simulação do Payload LIMIAR 3">
-            <p style="font-size:0.8em; text-align:center;">Payload da sonda</p>
-        </div>
-    </div>
-</section>
-
-<section id="desenvolvimento">
-    <h2>Desenvolvimento</h2>
-    <div class="card">
-        <p><strong>Payload:</strong> Descrição da estrutura física e proteção térmica.</p>
-        <p><strong>Eletrónica:</strong> Descrição dos microcontroladores (ex: Arduino/ESP32).</p>
-        <p><strong>Sensores:</strong> Listagem de sensores integrados (Pressão, Humidade, GPS, etc).</p>
-    </div>
+    <h2>A Missão</h2>
+    <p>O projeto <strong>LIMIAR3 - KAIROS</strong> foca-se na monitorização atmosférica e validação de hardware em ambientes de altitude extrema.</p>
 </section>
 
 <section id="testes">
-    <h2>Testes</h2>
+    <h2>Estado dos Testes</h2>
     <div class="card">
-        <p><span class="status done">CONCLUÍDO</span> <strong>Conformidade Estrutural:</strong> Verificação de pesos e medidas.</p>
-        <p><span class="status pending">AGUARDANDO</span> <strong>Funcionamento Contínuo:</strong> Teste de bateria CATI.</p>
-        <p><span class="status pending">AGUARDANDO</span> <strong>Teste de Frio:</strong> Simulação de temperatura estratosférica.</p>
-    </div>
-</section>
-
-<section id="lancamento">
-    <h2>Lançamento</h2>
-    <p>Informações sobre o local de lançamento e links de rastreio (GPS).</p>
-    <div class="placeholder-box">
-        Fotos e links do lançamento serão inseridos aqui.
-    </div>
-</section>
-
-<section id="dados">
-    <h2>Dados da Missão</h2>
-    <p>Telemetria e análise de dados pós-voo.</p>
-    <div class="placeholder-box">
-        <p>Os gráficos serão integrados aqui.</p>
+        <p>📡 Telemetria: <b>Em fase de configuração</b></p>
+        <p>🔋 Bateria: <b>Aguardando teste de descarga</b></p>
     </div>
 </section>
 
 <footer>
-    &copy; 2024 Missão LIMIAR3 - KAIROS | Em parceria com o CATI.
+    &copy; 2024 Missão LIMIAR3 - KAIROS | CATI
 </footer>
-
-</body>
-</html>
