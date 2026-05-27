@@ -22,8 +22,7 @@
         
         .submenu { display: none; position: absolute; background: #161b22; min-width: 260px; border: 1px solid #30363d; box-shadow: 0 8px 16px rgba(0,0,0,0.5); text-align: left; }
         nav ul li:hover .submenu { display: block; }
-        .submenu a { border-bottom: 1px solid #30363d; padding: 12px 20px; text-transform: none; font-size: 0.8em; }
-        .submenu a:last-child { border-bottom: none; }
+        .submenu a { border-bottom: 1px solid #30363d; padding: 12px 20px; text-transform: none; }
 
         /* Imagem LIMIAR3 Logo abaixo do Menu */
         .banner-logo { width: 100%; background: #0d1117; padding: 40px 0; display: flex; justify-content: center; }
@@ -87,9 +86,17 @@
 <section id="noticias">
     <h2>Notícias</h2>
     <div class="card">
-        <p>O clube CATI prepara o lançamento da missão estratosférica “LIMIAR3 : KAIROS”, um projeto desenvolvido por alunos do 3º ciclo e secundário para levar a investigação estudantil até cerca de 40 km de altitude.</p>
+        <p>O clube CATI, da Escola Secundária Carlos Amarante, em Braga, prepara o lançamento da missão estratosférica “LIMIAR3 : KAIROS”, um projeto científico e tecnológico desenvolvido por alunos do ensino básico (3º ciclo) e secundário, com o objetivo de levar investigação estudantil experimental portuguesa até cerca de 40 km de altitude.</p>
+        
+        <p>A missão utilizará um balão estratosférico de alta altitude capaz de transportar dois payloads científicos independentes através da troposfera e da estratosfera, ultrapassando largamente a altitude de voo da aviação comercial. A iniciativa integra áreas como engenharia aeroespacial experimental, sistemas embarcados, telecomunicações LoRa, monitorização ambiental, navegação GPS e fotografia de alta altitude.</p>
+
+        <h3>Ciência e Engenharia em Contexto Educativo</h3>
+        <p>O projeto é desenvolvido no âmbito do CATI — Carlos Amarante Tecnologia e Inovação, clube integrado no programa Clube Ciência Viva da Escola Secundária Carlos Amarante. A missão envolve alunos do 7.º ao 12.º ano de escolaridade, promovendo contacto direto com eletrónica, programação e ciência atmosférica.</p>
+        
+        <p>Segundo a equipa do projeto, a missão pretende demonstrar que “a escola pode ser um espaço real de inovação tecnológica e investigação científica aplicada, aproximando os jovens dos desafios da engenharia e da exploração científica”.</p>
+
         <div class="links-container">
-            <a href="#" class="btn-link btn-youtube">▶ Ver Reportagem</a>
+            <a href="#" class="btn-link btn-youtube">▶ Ver Reportagem Completa</a>
             <a href="noticia.pdf" download class="btn-link btn-drive">📄 Notícia em PDF</a>
         </div>
     </div>
@@ -100,22 +107,22 @@
     
     <div id="missao-desc" class="card">
         <h3>Descrição Geral</h3>
-        <p>A missão <strong>LIMIAR3 : KAIROS</strong> visa o lançamento de uma plataforma científica até à estratosfera superior para recolher dados críticos sobre o ambiente próximo do espaço.</p>
+        <p>A missão <strong>LIMIAR3 : KAIROS</strong> é uma iniciativa de exploração aeroespacial estudantil que visa o lançamento de uma plataforma científica até à estratosfera superior. Através da utilização de um balão de hélio de alta altitude, a missão transportará sistemas eletrónicos avançados para recolher dados críticos sobre o ambiente próximo do espaço, servindo como uma plataforma de aprendizagem prática em engenharia aplicada e comunicações de longo alcance.</p>
     </div>
 
     <div id="obj-gerais" class="card">
         <h3>Objetivos Gerais</h3>
-        <p>Caracterização térmica de payloads, construção de perfis atmosféricos e observação da curvatura terrestre.</p>
+        <p>Os principais objetivos científicos incluem a caracterização térmica de payloads estratosféricos, a construção de perfis verticais de temperatura e pressão, o estudo da radiação ultravioleta em altitude e a observação da curvatura da Terra.</p>
     </div>
 
     <div id="m-payload1" class="card">
         <h3>Payload 1 (Científico)</h3>
-        <p>Estudo do comportamento térmico em ambiente extremo e dinâmica de voo.</p>
+        <p>Dedicado à componente científica, este payload integra sensores distribuídos para estudar o comportamento térmico em ambiente extremo e a dinâmica do voo.</p>
     </div>
 
     <div id="m-payload2" class="card">
         <h3>Payload 2 (Ambiental)</h3>
-        <p>Monitorização da qualidade do ar e fotografia de alta altitude.</p>
+        <p>Focado na monitorização ambiental, incorpora sensores de gases e sistemas fotográficos capazes de captar o horizonte atmosférico.</p>
     </div>
 </section>
 
@@ -124,33 +131,33 @@
     
     <div id="dev-p1" class="card">
         <h3>Payload 1 - Instrumentação</h3>
-        <p>Sensores atmosféricos e unidades de medição inercial.</p>
+        <p>Integração de sensores de temperatura, pressão, humidade e unidades de medição inercial.</p>
     </div>
 
     <div id="dev-tel" class="card">
         <h3>Telemetria e LoRa</h3>
-        <p>Comunicação de longo alcance em tempo real.</p>
+        <p>Sistemas baseados em comunicações LoRa de longo alcance e transmissão de dados em tempo real.</p>
     </div>
 
     <div id="dev-p2" class="card">
         <h3>Payload 2 - Sensores e Imagem</h3>
-        <p>Câmaras de alta resolução e sensores UV.</p>
+        <p>Desenvolvimento de sensores UV e integração de sistemas de captação de imagem de alta resolução.</p>
     </div>
 
     <div id="dev-aux" class="card">
         <h3>Sistemas de Recuperação e GPS</h3>
-        <p>Rastreamento para localização pós-aterragem.</p>
+        <p>Inclui GPS e sistema auxiliar GSM/LTE para garantir a localização e recuperação segura do sistema após aterragem.</p>
     </div>
 </section>
 
 <section id="testes">
     <h2>Testes</h2>
-    <div class="card"><p>Documentação dos ensaios térmicos e testes de alcance.</p></div>
+    <div class="card"><p>Documentação de testes de vácuo, ensaios térmicos e testes de alcance LoRa realizados pela equipa.</p></div>
 </section>
 
 <section id="dados">
     <h2>Dados</h2>
-    <div class="card"><p>Repositório de dados científicos da missão.</p></div>
+    <div class="card"><p>Repositório de dados científicos e telemetria recolhidos durante o voo da missão LIMIAR3.</p></div>
 </section>
 
 <footer>
