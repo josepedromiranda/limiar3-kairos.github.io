@@ -38,8 +38,8 @@
         
         section { padding: 40px 20px; max-width: 900px; margin: auto; text-align: left; }
         h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; margin-bottom: 20px; text-transform: uppercase; }
-        h3 { color: #c9d1d9; margin-top: 0; }
-        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        h3 { color: #c9d1d9; margin-top: 0; border-bottom: 1px solid #30363d; padding-bottom: 5px; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-bottom: 20px; line-height: 1.6; }
         
         /* Botões para Vídeos e Drive */
         .links-container { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
@@ -54,6 +54,7 @@
         .btn-youtube:hover { background: #ff0000; }
 
         footer { padding: 40px; color: #8b949e; font-size: 0.8em; border-top: 1px solid #30363d; }
+        ul.text-list { padding-left: 20px; }
     </style>
 </head>
 <body>
@@ -95,87 +96,16 @@
 <section id="noticias">
     <h2>Notícias</h2>
     <div class="card">
-        <p><strong>[28 maio 2026]</strong> - <strong>Lançamento do Novo Site</strong></p>
-        <p>A missão LIMIAR3 : KAIROS entra agora numa nova fase de divulgação digital.</p>
+        <h3>[2026] LIMIAR3 : KAIROS - Escola Secundária Carlos Amarante</h3>
+        <p>O clube <strong>CATI</strong>, em Braga, prepara o lançamento da missão estratosférica <strong>“LIMIAR3 : KAIROS”</strong>. Este projeto, desenvolvido por alunos do 7.º ao 12.º ano, visa levar a investigação estudantil portuguesa até aos <strong>40 km de altitude</strong>.</p>
+        <p>A missão utilizará um balão estratosférico de alta altitude para transportar dois payloads independentes, integrando áreas como engenharia aeroespacial, sistemas embarcados, telecomunicações LoRa e fotografia de alta altitude.</p>
+        <div class="links-container">
+            <a href="LINK_YOUTUBE_NOTICIA" class="btn-link btn-youtube">▶ Vídeo da Iniciativa</a>
+        </div>
     </div>
 </section>
 
 <section id="missao">
     <h2>A Missão</h2>
     
-    <div id="obj-gerais" class="card">
-        <h3>Objetivos Gerais</h3>
-        <p>Exploração da estratosfera até 40km de altitude para estudo ambiental extremo.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_OBJETIVOS" class="btn-link btn-drive">📄 Relatório</a>
-            <a href="LINK_YOUTUBE_MISSAO" class="btn-link btn-youtube">▶ Vídeo</a>
-        </div>
-    </div>
-
-    <div id="m-payload1" class="card">
-        <h3>Missão: Payload 1</h3>
-        <p>Foco na recolha de dados atmosféricos primários.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_P1" class="btn-link btn-drive">📄 Documentação</a>
-        </div>
-    </div>
-
-    <div id="m-payload2" class="card">
-        <h3>Missão: Payload 2</h3>
-        <p>Foco em observação visual e redundância de dados.</p>
-    </div>
-</section>
-
-<section id="desenvolvimento">
-    <h2>Desenvolvimento</h2>
-    
-    <div id="dev-p1" class="card">
-        <h3>Payload 1 - Sistema Científico</h3>
-        <p>Desenvolvimento dos sensores de CO2, pressão e temperatura.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_CIENTIFICO" class="btn-link btn-drive">📄 Esquemas Técnicos</a>
-            <a href="LINK_YOUTUBE_P1" class="btn-link btn-youtube">▶ Teste de Bancada</a>
-        </div>
-    </div>
-
-    <div id="dev-telemetria" class="card">
-        <h3>Telemetria Principal</h3>
-        <p>Módulo de transmissão de dados em tempo real para a estação terrestre.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_TEL" class="btn-link btn-drive">📄 Código Fonte</a>
-        </div>
-    </div>
-
-    <div id="dev-p2" class="card">
-        <h3>Payload 2 - Sistema Ambiental</h3>
-        <p>Análise de partículas e monitorização de radiação.</p>
-        <div class="links-container">
-            <a href="LINK_YOUTUBE_P2" class="btn-link btn-youtube">▶ Review Sistema</a>
-        </div>
-    </div>
-
-    <div id="dev-aux" class="card">
-        <h3>Sistema de Telemetria Auxiliar</h3>
-        <p>Redundância de segurança para localização GPS e recuperação.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_AUX" class="btn-link btn-drive">📄 Protocolos</a>
-        </div>
-    </div>
-</section>
-
-<section id="testes">
-    <h2>Testes</h2>
-    <div class="card"><p>Conteúdo em desenvolvimento sobre os testes de voo e vácuo.</p></div>
-</section>
-
-<section id="dados">
-    <h2>Dados</h2>
-    <div class="card"><p>Visualização de dados recolhidos em tempo real e históricos.</p></div>
-</section>
-
-<footer>
-    &copy; 2026 Missão LIMIAR3 - KAIROS | CATI
-</footer>
-
-</body>
-</html>
+    <div id="obj-gerais" class
