@@ -7,71 +7,158 @@
     <style>
         body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
         
-        /* Cabeçalho Ajustado para dois logotipos */
+        /* Cabeçalho - Logotipos no topo e título por baixo */
         header { 
             background: #161b22; 
             padding: 20px; 
             border-bottom: 2px solid #58a6ff; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 30px; /* Espaço entre os logos */
-            flex-wrap: wrap;
         }
-        .logo-header { max-height: 80px; height: auto; } /* */
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto 15px auto;
+            padding: 0 20px;
+        }
+        .logo-header { max-height: 80px; width: auto; }
+        .header-title h1 { 
+            margin: 10px 0 0 0; 
+            font-size: 2em; 
+            color: #58a6ff; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
         /* Menu de Navegação */
-        nav { position: sticky; top: 0; background: #161b22; padding: 15px; border-bottom: 1px solid #30363d; z-index: 1000; }
-        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
-        nav a:hover { color: #58a6ff; }
+        nav { position: sticky; top: 0; background: #161b22; border-bottom: 1px solid #30363d; z-index: 1000; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        nav ul li { position: relative; }
+        nav a { display: block; color: #c9d1d9; padding: 15px 20px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
+        nav a:hover { color: #58a6ff; background: #1c2128; }
+        
+        /* Submenus */
+        .submenu { display: none; position: absolute; background: #161b22; min-width: 240px; border: 1px solid #30363d; box-shadow: 0 8px 16px rgba(0,0,0,0.5); }
+        nav ul li:hover .submenu { display: block; }
+        .submenu a { text-align: left; text-transform: none; border-bottom: 1px solid #30363d; padding: 12px 15px; }
 
         /* Banner */
         .banner-container { width: 100%; background: #0d1117; padding: 20px 0; display: flex; justify-content: center; }
         .img-limiar { width: 90%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 0 20px rgba(88, 166, 255, 0.2); }
         
         /* Conteúdo */
-        section { padding: 40px 20px; max-width: 800px; margin: auto; text-align: left; }
-        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; margin-bottom: 20px; }
-        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        section { padding: 40px 20px; max-width: 900px; margin: auto; text-align: left; }
+        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; margin-bottom: 20px; text-transform: uppercase; }
+        h3 { color: #c9d1d9; margin-top: 25px; border-bottom: 1px solid #30363d; padding-bottom: 5px; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 25px; border-radius: 8px; margin-bottom: 20px; line-height: 1.7; text-align: justify; }
+        
+        /* Botões */
+        .links-container { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+        .btn-link { display: inline-flex; align-items: center; padding: 8px 12px; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.8em; transition: 0.3s; }
+        .btn-drive { background: #238636; }
+        .btn-youtube { background: #bb0000; }
 
-        footer { padding: 40px; color: #8b949e; font-size: 0.8em; border-top: 1px solid #30363d; } /* */
+        footer { padding: 40px; color: #8b949e; font-size: 0.8em; border-top: 1px solid #30363d; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="img/cati_logo.png" alt="CATI Logo" class="logo-header">
-    
-    <div style="text-align: center;">
-        <h1 style="margin: 0; font-size: 1.5em; color: #58a6ff;">LIMIAR3 - KAIROS</h1>
+    <div class="logos-container">
+        <img src="img/cati_logo.png" alt="CATI Logo" class="logo-header">
+        <img src="img/CarlosAmarante-300x80.png" alt="Escola Carlos Amarante" class="logo-header">
     </div>
-
-    <img src="img/CarlosAmarante-300x80.png" alt="Logotipo Escola Carlos Amarante" class="logo-header">
+    
+    <div class="header-title">
+        <h1>LIMIAR3 - KAIROS</h1>
+    </div>
 </header>
 
 <nav>
-    <a href="#noticias">Notícias</a> <a href="#missao">Missão</a> <a href="#testes">Testes</a> <a href="#dados">Dados</a> </nav>
+    <ul>
+        <li><a href="#noticias">Notícias</a></li>
+        <li>
+            <a href="#missao">Missão ▾</a>
+            <div class="submenu">
+                <a href="#obj-gerais">Objetivos Gerais</a>
+                <a href="#m-payload1">Payload 1</a>
+                <a href="#m-payload2">Payload 2</a>
+            </div>
+        </li>
+        <li>
+            <a href="#desenvolvimento">Desenvolvimento ▾</a>
+            <div class="submenu">
+                <a href="#dev-p1">Payload 1 (Sist. Científico)</a>
+                <a href="#dev-telemetria">Telemetria</a>
+                <a href="#dev-p2">Payload 2 (Sist. Ambiental)</a>
+                <a href="#dev-aux">Sist. Telemetria Auxiliar</a>
+            </div>
+        </li>
+        <li><a href="#testes">Testes</a></li>
+        <li><a href="#dados">Dados</a></li>
+    </ul>
+</nav>
 
 <div class="banner-container">
-    <img src="img/limiar3_logo.png" alt="Missão LIMIAR3" class="img-limiar"> </div>
+    <img src="img/limiar3_logo.png" alt="Missão LIMIAR3" class="img-limiar">
+</div>
 
 <section id="noticias">
-    <h2>Notícias da Missão</h2> <div class="card">
-        <p><strong>[Site Atualizado]</strong> - A missão LIMIAR3 : KAIROS é um projeto experimental de exploração estratosférica desenvolvido por alunos dos ensinos básico (3º ciclo) e secundário...</p>
-    </div>
-
+    <h2>Notícias</h2>
     <div class="card">
-        <p><strong>[28 maio 2026]</strong> - <strong>LIMIAR3</strong></p> <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 15px;">
-            <div style="flex: 2; min-width: 300px; text-align: justify;">
-                <p>A missão LIMIAR3 : KAIROS é um projeto experimental de exploração estratosférica...</p>
-                <p>Inspirada na investigação aeroespacial...</p>
-                <p>O nome KAIROS representa o “momento oportuno”...</p>
-            </div>
-            <div style="flex: 1; min-width: 200px;">
-                <img src="img/NOME_DA_TUA_IMAGEM.png" alt="Ilustração da notícia" style="width: 100%; border-radius: 8px; border: 1px solid #30363d;"> </div>
+        <p>O clube CATI, da Escola Secundária Carlos Amarante, em Braga, prepara o lançamento da missão estratosférica “LIMIAR3 : KAIROS”[cite: 87]. Este projeto científico e tecnológico é desenvolvido por alunos do ensino básico (3º ciclo) e secundário, visando levar a investigação estudantil portuguesa até cerca de 40 km de altitude[cite: 87].</p>
+        
+        <p>A missão utilizará um balão estratosférico de alta altitude para transportar dois payloads científicos independentes[cite: 88]. A iniciativa integra áreas como engenharia aeroespacial experimental, telecomunicações LoRa, monitorização ambiental e fotografia de alta altitude[cite: 89, 90, 92, 94, 98].</p>
+
+        <h3>Ciência em Contexto Educativo</h3>
+        <p>O projeto decorre no âmbito do CATI — Carlos Amarante Tecnologia e Inovação, integrado no programa Clube Ciência Viva da Escola Secundária Carlos Amarante[cite: 120]. Envolve alunos do 7.º ao 12.º ano, promovendo o contacto direto com eletrónica, programação e ciência atmosférica[cite: 121, 123, 124, 125].</p>
+
+        <div class="links-container">
+            <a href="#" class="btn-link btn-youtube">▶ Ver Reportagem</a>
+            <a href="#" class="btn-link btn-drive">📄 Notícia Completa (PDF)</a>
         </div>
     </div>
 </section>
 
 <section id="missao">
-    <h2>A Missão</h2> <p>O projeto LIMIAR
+    <h2>A Missão</h2>
+    <div id="obj-gerais" class="card">
+        <h3>Objetivos Científicos</h3>
+        <ul>
+            <li>Caracterização térmica de payloads estratosféricos[cite: 110].</li>
+            <li>Construção de perfis verticais de temperatura, pressão e humidade[cite: 111].</li>
+            <li>Estudo da radiação ultravioleta em altitude[cite: 112].</li>
+            <li>Observação da curvatura da Terra e do escurecimento progressivo do céu[cite: 116].</li>
+        </ul>
+    </div>
+</section>
+
+<section id="desenvolvimento">
+    <h2>Desenvolvimento</h2>
+    <div id="dev-p1" class="card">
+        <h3>Payload 1 (Sistema Científico)</h3>
+        <p>Integra sensores de temperatura distribuídos, sensores atmosféricos e unidades de medição inercial para estudar o comportamento térmico em ambiente extremo[cite: 99, 100].</p>
+    </div>
+    
+    <div id="dev-telemetria" class="card">
+        <h3>Telemetria</h3>
+        <p>Utiliza comunicações LoRa de longo alcance, Meshtastic e transmissão de dados em tempo real[cite: 104, 105, 106].</p>
+    </div>
+
+    <div id="dev-p2" class="card">
+        <h3>Payload 2 (Sistema Ambiental)</h3>
+        <p>Dedicado à monitorização ambiental, incorporando sensores de gases, sensores ultravioleta e sistemas fotográficos de alta altitude[cite: 101].</p>
+    </div>
+
+    <div id="dev-aux" class="card">
+        <h3>Sistema Telemetria Auxiliar</h3>
+        <p>Inclui GPS e sistema auxiliar GSM/LTE para garantir a localização e recuperação do payload após aterragem[cite: 103, 107].</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Missão LIMIAR3 - KAIROS | CATI - Escola Secundária Carlos Amarante
+</footer>
+
+</body>
+</html>
