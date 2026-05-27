@@ -7,7 +7,7 @@
     <style>
         body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
         
-        /* CABEÇALHO: Logotipos no nível superior e título por baixo */
+        /* CABEÇALHO: Logotipos no topo e Título por baixo */
         header { 
             background: #161b22; 
             padding: 30px 20px; 
@@ -82,6 +82,7 @@
         <li>
             <a href="#missao">Missão ▾</a>
             <div class="submenu">
+                <a href="#missao-desc">Descrição Geral</a>
                 <a href="#obj-gerais">Objetivos Gerais</a>
                 <a href="#m-payload1">Payload 1 (Científico)</a>
                 <a href="#m-payload2">Payload 2 (Ambiental)</a>
@@ -108,9 +109,6 @@
         
         <p>A missão utilizará um balão estratosférico de alta altitude capaz de transportar dois payloads científicos independentes através da troposfera e da estratosfera. A iniciativa integra áreas como engenharia aeroespacial experimental, telecomunicações LoRa, monitorização ambiental e fotografia de alta altitude.</p>
 
-        <h3>Ciência e Engenharia em Contexto Educativo</h3>
-        <p>O projeto é desenvolvido no âmbito do CATI, clube integrado no programa Clube Ciência Viva da Escola Secundária Carlos Amarante. Envolve alunos do 7.º ao 12.º ano, promovendo o contacto direto com a eletrónica, programação e ciência atmosférica.</p>
-        
         <div class="links-container">
             <a href="#" class="btn-link btn-youtube">▶ Ver Reportagem</a>
             <a href="noticia.pdf" download class="btn-link btn-drive">📄 Notícia em PDF</a>
@@ -120,15 +118,29 @@
 
 <section id="missao">
     <h2>A Missão</h2>
+    
+    <div id="missao-desc" class="card">
+        <h3>Descrição Geral</h3>
+        <p>A missão <strong>LIMIAR3 : KAIROS</strong> é uma iniciativa de exploração aeroespacial estudantil que visa o lançamento de uma plataforma científica até à estratosfera superior. Através da utilização de um balão de hélio de alta altitude, a missão transportará sistemas eletrónicos avançados para recolher dados críticos sobre o ambiente próximo do espaço, servindo como uma plataforma de aprendizagem prática em engenharia aplicada, física atmosférica e comunicações de longo alcance.</p>
+    </div>
+
     <div id="obj-gerais" class="card">
         <h3>Objetivos Gerais</h3>
-        <p>Caracterização térmica de payloads, construção de perfis verticais atmosféricos e observação da curvatura da Terra.</p>
+        <p>Os principais objetivos incluem a caracterização térmica de payloads, a construção de perfis verticais de temperatura e pressão, o estudo da radiação ultravioleta e a observação visual da curvatura da Terra.</p>
+    </div>
+
+    <div id="m-payload1" class="card">
+        <h3>Missão Payload 1 (Científico)</h3>
+        <p>Focado na recolha de dados atmosféricos e monitorização de dinâmica de voo através de sensores inerciais e térmicos.</p>
+    </div>
+
+    <div id="m-payload2" class="card">
+        <h3>Missão Payload 2 (Ambiental)</h3>
+        <p>Dedicado à análise da qualidade do ar em altitude e captação de imagem e vídeo de alta resolução do horizonte terrestre.</p>
     </div>
 </section>
 
-<footer>
-    &copy; 2026 Missão LIMIAR3 - KAIROS | CATI - Escola Secundária Carlos Amarante
-</footer>
-
-</body>
-</html>
+<section id="desenvolvimento">
+    <h2>Desenvolvimento</h2>
+    <div class="card">
+        <p>Conteúdo em desenvolvimento sobre os sistemas embarcados e protocolos de comunicação LoRa utilizados na missão.</p>
