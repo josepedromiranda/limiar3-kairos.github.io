@@ -7,7 +7,7 @@
     <style>
         body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; scroll-behavior: smooth; }
         
-        /* Cabeçalho solicitado: Logos no topo, Título por baixo */
+        /* Cabeçalho: Logos no topo, Título por baixo */
         header { background: #161b22; padding: 30px 20px; border-bottom: 2px solid #58a6ff; }
         .logos-container { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto 20px auto; }
         .logo-header { max-height: 80px; width: auto; }
@@ -107,57 +107,69 @@
     
     <div id="missao-desc" class="card">
         <h3>Descrição Geral</h3>
-        <p>A missão <strong>LIMIAR3 : KAIROS</strong> é uma iniciativa de exploração aeroespacial estudantil que visa o lançamento de uma plataforma científica até à estratosfera superior. Através da utilização de um balão de hélio de alta altitude, a missão transportará sistemas eletrónicos avançados para recolher dados críticos sobre o ambiente próximo do espaço, servindo como uma plataforma de aprendizagem prática em engenharia aplicada e comunicações de longo alcance.</p>
+        <p>A missão <strong>LIMIAR3 : KAIROS</strong> é uma iniciativa de exploração aeroespacial estudantil que visa o lançamento de uma plataforma científica até à estratosfera superior. Através da utilização de um balão de hélio de alta altitude, a missão transportará sistemas eletrónicos avançados para recolher dados críticos sobre o ambiente próximo do espaço, servindo como uma plataforma de aprendizagem prática em engenharia aplicada, física atmosférica e comunicações de longo alcance.</p>
     </div>
 
     <div id="obj-gerais" class="card">
-        <h3>Objetivos Gerais</h3>
-        <p>Os principais objetivos científicos incluem a caracterização térmica de payloads estratosféricos, a construção de perfis verticais de temperatura e pressão, o estudo da radiação ultravioleta em altitude e a observação da curvatura da Terra.</p>
+        <h3>Objetivos Gerais da Missão</h3>
+        <p>Entre os principais objetivos científicos e tecnológicos da missão destacam-se:</p>
+        <ul style="padding-left: 20px;">
+            <li>Caracterização térmica de payloads estratosféricos;</li>
+            <li>Construção de perfis verticais de temperatura, pressão e humidade;</li>
+            <li>Estudo da radiação ultravioleta em altitude;</li>
+            <li>Observação da curvatura da Terra e do escurecimento progressivo do céu;</li>
+            <li>Análise da transição entre as diferentes camadas atmosféricas (troposfera e estratosfera);</li>
+            <li>Teste de protocolos de comunicação de longo alcance em condições extremas.</li>
+        </ul>
     </div>
 
     <div id="m-payload1" class="card">
         <h3>Payload 1 (Científico)</h3>
-        <p>Dedicado à componente científica, este payload integra sensores distribuídos para estudar o comportamento térmico em ambiente extremo e a dinâmica do voo.</p>
+        <p>Dedicado à componente científica e de telemetria, este payload integra sensores distribuídos e sistemas de registo em microSD para estudar o comportamento térmico em ambiente extremo e a dinâmica do voo através de sensores inerciais.</p>
     </div>
 
     <div id="m-payload2" class="card">
         <h3>Payload 2 (Ambiental)</h3>
-        <p>Focado na monitorização ambiental, incorpora sensores de gases e sistemas fotográficos capazes de captar o horizonte atmosférico.</p>
+        <p>Focado na monitorização ambiental e observação visual, incorpora sensores de gases e sistemas fotográficos de alta resolução capazes de captar o horizonte atmosférico e a curvatura terrestre.</p>
     </div>
 </section>
 
 <section id="desenvolvimento">
-    <h2>Desenvolvimento</h2>
+    <h2>Desenvolvimento Tecnológico</h2>
     
     <div id="dev-p1" class="card">
-        <h3>Payload 1 - Instrumentação</h3>
-        <p>Integração de sensores de temperatura, pressão, humidade e unidades de medição inercial.</p>
+        <h3>Payload 1 - Instrumentação Científica</h3>
+        <p>Integração de sensores de temperatura, pressão, humidade e unidades de medição inercial para análise do comportamento da plataforma.</p>
     </div>
 
     <div id="dev-tel" class="card">
-        <h3>Telemetria e LoRa</h3>
-        <p>Sistemas baseados em comunicações LoRa de longo alcance e transmissão de dados em tempo real.</p>
+        <h3>Telemetria e Comunicações</h3>
+        <p>Sistemas baseados em comunicações LoRa de longo alcance, Meshtastic e transmissão de pacotes de dados em tempo real para a estação de terra.</p>
     </div>
 
     <div id="dev-p2" class="card">
         <h3>Payload 2 - Sensores e Imagem</h3>
-        <p>Desenvolvimento de sensores UV e integração de sistemas de captação de imagem de alta resolução.</p>
+        <p>Desenvolvimento de placas de sensores ultravioleta, sensores de gases e integração de câmaras de alta altitude configuradas para condições de baixa luminosidade.</p>
     </div>
 
     <div id="dev-aux" class="card">
-        <h3>Sistemas de Recuperação e GPS</h3>
-        <p>Inclui GPS e sistema auxiliar GSM/LTE para garantir a localização e recuperação segura do sistema após aterragem.</p>
+        <h3>Sistemas Auxiliares e Recuperação</h3>
+        <p>Redundância com GPS independente e sistema GSM/LTE para garantir a localização exata e a recuperação segura do sistema após a aterragem.</p>
     </div>
 </section>
 
 <section id="testes">
     <h2>Testes</h2>
-    <div class="card"><p>Documentação de testes de vácuo, ensaios térmicos e testes de alcance LoRa realizados pela equipa.</p></div>
+    <div class="card">
+        <p>Registo e documentação de testes de vácuo, ensaios térmicos para simular a estratosfera e testes de alcance LoRa realizados pela equipa CATI.</p>
+    </div>
 </section>
 
 <section id="dados">
     <h2>Dados</h2>
-    <div class="card"><p>Repositório de dados científicos e telemetria recolhidos durante o voo da missão LIMIAR3.</p></div>
+    <div class="card">
+        <p>Visualização e análise dos dados científicos e telemetria recolhidos durante o voo da missão LIMIAR3 : KAIROS.</p>
+    </div>
 </section>
 
 <footer>
