@@ -7,36 +7,68 @@
     <style>
         body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
         
-        /* Cabeçalho - Logo CATI */
         header { background: #161b22; padding: 20px; border-bottom: 2px solid #58a6ff; }
         .logo-cati { max-height: 80px; height: auto; }
 
-        /* Menu de Navegação */
-        nav { position: sticky; top: 0; background: #161b22; padding: 15px; border-bottom: 1px solid #30363d; z-index: 1000; }
-        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
-        nav a:hover { color: #58a6ff; }
-
-        /* Banner Limiar 3 - ABAIXO DO MENU */
-        .banner-container { 
-            width: 100%; 
-            background: #0d1117; 
-            padding: 20px 0; 
+        /* Menu de Navegação com Submenu */
+        nav { 
+            position: sticky; 
+            top: 0; 
+            background: #161b22; 
+            padding: 0; 
+            border-bottom: 1px solid #30363d; 
+            z-index: 1000; 
             display: flex;
             justify-content: center;
         }
-        .img-limiar { 
-            width: 90%; 
-            max-width: 800px; /* Impede que a imagem fique gigante no PC */
-            height: auto; 
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+        nav ul li { position: relative; }
+        nav a { 
+            display: block;
+            color: #c9d1d9; 
+            padding: 15px 20px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.85em; 
         }
+        nav a:hover { color: #58a6ff; background: #1c2128; }
 
-        /* Secções de Conteúdo */
+        /* Estilo do Submenu */
+        .submenu { 
+            display: none; 
+            position: absolute; 
+            background: #161b22; 
+            min-width: 200px; 
+            border: 1px solid #30363d;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+        }
+        nav ul li:hover .submenu { display: block; }
+        .submenu a { text-align: left; text-transform: none; border-bottom: 1px solid #30363d; }
+
+        .banner-container { width: 100%; background: #0d1117; padding: 20px 0; display: flex; justify-content: center; }
+        .img-limiar { width: 90%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 0 20px rgba(88, 166, 255, 0.2); }
+        
         section { padding: 40px 20px; max-width: 800px; margin: auto; text-align: left; }
         h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; margin-bottom: 20px; }
         .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
         
+        /* Estilos para Links Externos */
+        .btn-link { 
+            display: inline-block; 
+            padding: 10px 15px; 
+            margin-top: 10px; 
+            background: #238636; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .btn-link:hover { background: #2ea043; }
+        .btn-youtube { background: #bb0000; }
+        .btn-youtube:hover { background: #ff0000; }
+
         footer { padding: 40px; color: #8b949e; font-size: 0.8em; border-top: 1px solid #30363d; }
     </style>
 </head>
@@ -48,10 +80,19 @@
 </header>
 
 <nav>
-    <a href="#noticias">Notícias</a>
-    <a href="#missao">Missão</a>
-    <a href="#testes">Testes</a>
-    <a href="#dados">Dados</a>
+    <ul>
+        <li><a href="#noticias">Notícias</a></li>
+        <li>
+            <a href="#missao">Missão ▾</a>
+            <div class="submenu">
+                <a href="#objetivos">Objetivos Gerais</a>
+                <a href="#payload1">Payload 1</a>
+                <a href="#payload2">Payload 2</a>
+            </div>
+        </li>
+        <li><a href="#recursos">Documentos & Vídeos</a></li>
+        <li><a href="#dados">Dados</a></li>
+    </ul>
 </nav>
 
 <div class="banner-container">
@@ -61,45 +102,59 @@
 <section id="noticias">
     <h2>Notícias da Missão</h2>
     <div class="card">
-        <p><strong>[Site Atualizado]</strong> - A missão LIMIAR3 : KAIROS é um projeto experimental de exploração estratosférica desenvolvido por alunos dos ensinos básico (3º ciclo) e secundário, com o objetivo de estudar o ambiente atmosférico extremo até aos 40 km de altitude, recorrendo a um balão estratosférico de alta altitude equipado com dois payloads científicos independentes.</p>
+        <p><strong>[28 maio 2026]</strong> - <strong>LIMIAR3</strong></p>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+            <div style="flex: 2; min-width: 300px; text-align: justify;">
+                A missão LIMIAR3 : KAIROS é um projeto experimental de exploração estratosférica desenvolvido por alunos... [cite: 62]
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <img src="img/NOME_DA_TUA_IMAGEM.png" alt="Ilustração" style="width: 100%; border-radius: 8px;">
+            </div>
+        </div>
     </div>
 </section>
 
-<div class="card">
-    <p><strong>[28 maio 2026]</strong> - <strong>LIMIAR3</strong></p>
-    
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 15px;">
-        
-        <div style="flex: 2; min-width: 300px; text-align: justify;">
-           A missão LIMIAR3 : KAIROS é um projeto experimental de exploração estratosférica desenvolvido por alunos dos ensinos básico (3º ciclo) e secundário, com o objetivo de estudar o ambiente atmosférico extremo até aos 40 km de altitude, recorrendo a um balão estratosférico de alta altitude equipado com dois payloads científicos independentes..</p>
-     
-           Inspirada na investigação aeroespacial e na instrumentação científica utilizada em missões atmosféricas, a LIMIAR3 : KAIROS combina tecnologia embarcada, aquisição de dados ambientais, telemetria em tempo real e observação visual da estratosfera numa única plataforma experimental.</p>
-        
-           A missão será acompanhada por uma estação móvel terrestre equipada para rastreamento, receção de telemetria e recuperação do sistema após aterragem.</p>
-            O nome KAIROS representa o “momento oportuno” — o instante certo para ultrapassar limites tecnológicos, científicos e humanos, levando uma missão estudantil experimental portuguesa até à fronteira do espaço próximo.</p>
-        </div> 
-            A missão será acompanhada por uma estação móvel terrestre equipada para rastreamento, receção de telemetria e recuperação do sistema após aterragem.</p>
-        </div>
-
-        <div style="flex: 1; min-width: 200px;">
-            <img src="img/NOME_DA_TUA_IMAGEM.png" 
-                 alt="Ilustração da notícia" 
-                 style="width: 100%; border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-        </div>
-
-    </div>
-</div>
-
-    
 <section id="missao">
-    <h2>A Missão</h2>
-    <p>O projeto LIMIAR3 - KAIROS visa a exploração da estratosfera para recolha de dados científicos críticos.</p>
+    <div id="objetivos">
+        <h2>Objetivos Gerais</h2>
+        <div class="card">
+            <p>O projeto visa a exploração da estratosfera até aos 40 km de altitude para recolha de dados científicos críticos. [cite: 62, 78]</p>
+        </div>
+    </div>
+
+    <div id="payload1">
+        <h2>Payload 1</h2>
+        <div class="card">
+            <p>Descrição técnica do primeiro módulo científico (ex: Sensores de pressão, temperatura e CO2).</p>
+        </div>
+    </div>
+
+    <div id="payload2">
+        <h2>Payload 2</h2>
+        <div class="card">
+            <p>Descrição técnica do segundo módulo científico (ex: Câmara 360º e telemetria rádio).</p>
+        </div>
+    </div>
 </section>
 
-</body>
-</html>
+<section id="recursos">
+    <h2>Recursos Multimédia</h2>
+    <div class="card">
+        <h3>YouTube - Acompanhamento</h3>
+        <p>Assista aos testes e lançamentos no nosso canal oficial:</p>
+        <a href="URL_DO_TEU_CANAL" target="_blank" class="btn-link btn-youtube">Ver Vídeos no YouTube</a>
+    </div>
+
+    <div class="card">
+        <h3>Documentação e Relatórios</h3>
+        <p>Aceda aos relatórios técnicos e documentos de missão no Google Drive:</p>
+        <a href="URL_DO_TEU_DRIVE" target="_blank" class="btn-link">Aceder ao Google Drive</a>
+    </div>
+</section>
+
 <footer>
-        &copy; 2026 Missão LIMIAR3 - KAIROS | CATI
-    </footer>
+    &copy; 2026 Missão LIMIAR3 - KAIROS | CATI [cite: 83]
+</footer>
+
 </body>
 </html>
