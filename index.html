@@ -7,175 +7,71 @@
     <style>
         body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
         
-        header { background: #161b22; padding: 20px; border-bottom: 2px solid #58a6ff; }
-        .logo-cati { max-height: 80px; height: auto; }
+        /* Cabeçalho Ajustado para dois logotipos */
+        header { 
+            background: #161b22; 
+            padding: 20px; 
+            border-bottom: 2px solid #58a6ff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 30px; /* Espaço entre os logos */
+            flex-wrap: wrap;
+        }
+        .logo-header { max-height: 80px; height: auto; } /* */
 
         /* Menu de Navegação */
-        nav { 
-            position: sticky; top: 0; background: #161b22; padding: 0; 
-            border-bottom: 1px solid #30363d; z-index: 1000; 
-            display: flex; justify-content: center;
-        }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
-        nav ul li { position: relative; }
-        nav a { 
-            display: block; color: #c9d1d9; padding: 15px 20px; 
-            text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; 
-        }
-        nav a:hover { color: #58a6ff; background: #1c2128; }
+        nav { position: sticky; top: 0; background: #161b22; padding: 15px; border-bottom: 1px solid #30363d; z-index: 1000; }
+        nav a { color: #c9d1d9; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
+        nav a:hover { color: #58a6ff; }
 
-        /* Estilo dos Submenus */
-        .submenu { 
-            display: none; position: absolute; background: #161b22; 
-            min-width: 220px; border: 1px solid #30363d;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-        }
-        nav ul li:hover .submenu { display: block; }
-        .submenu a { text-align: left; text-transform: none; border-bottom: 1px solid #30363d; padding: 12px 15px; }
-
+        /* Banner */
         .banner-container { width: 100%; background: #0d1117; padding: 20px 0; display: flex; justify-content: center; }
         .img-limiar { width: 90%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 0 20px rgba(88, 166, 255, 0.2); }
         
-        section { padding: 40px 20px; max-width: 900px; margin: auto; text-align: left; }
-        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; margin-bottom: 20px; text-transform: uppercase; }
-        h3 { color: #c9d1d9; margin-top: 0; }
+        /* Conteúdo */
+        section { padding: 40px 20px; max-width: 800px; margin: auto; text-align: left; }
+        h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; margin-bottom: 20px; }
         .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        
-        /* Botões para Vídeos e Drive */
-        .links-container { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
-        .btn-link { 
-            display: inline-flex; align-items: center; padding: 8px 12px; 
-            color: white; text-decoration: none; border-radius: 6px; 
-            font-weight: bold; font-size: 0.8em; transition: 0.3s;
-        }
-        .btn-drive { background: #238636; }
-        .btn-drive:hover { background: #2ea043; }
-        .btn-youtube { background: #bb0000; }
-        .btn-youtube:hover { background: #ff0000; }
 
-        footer { padding: 40px; color: #8b949e; font-size: 0.8em; border-top: 1px solid #30363d; }
+        footer { padding: 40px; color: #8b949e; font-size: 0.8em; border-top: 1px solid #30363d; } /* */
     </style>
 </head>
 <body>
 
 <header>
-    <img src="img/cati_logo.png" alt="CATI Logo" class="logo-cati">
-    <h1 style="margin-top:10px; font-size: 1.5em; color: #58a6ff;">LIMIAR3 - KAIROS</h1>
+    <img src="img/cati_logo.png" alt="CATI Logo" class="logo-header">
+    
+    <div style="text-align: center;">
+        <h1 style="margin: 0; font-size: 1.5em; color: #58a6ff;">LIMIAR3 - KAIROS</h1>
+    </div>
+
+    <img src="img/CarlosAmarante-300x80.png" alt="Logotipo Escola Carlos Amarante" class="logo-header">
 </header>
 
 <nav>
-    <ul>
-        <li><a href="#noticias">Notícias</a></li>
-        <li>
-            <a href="#missao">Missão ▾</a>
-            <div class="submenu">
-                <a href="#obj-gerais">Objetivos Gerais</a>
-                <a href="#m-payload1">Payload 1</a>
-                <a href="#m-payload2">Payload 2</a>
-            </div>
-        </li>
-        <li>
-            <a href="#desenvolvimento">Desenvolvimento ▾</a>
-            <div class="submenu">
-                <a href="#dev-p1">Payload 1 (Científico)</a>
-                <a href="#dev-telemetria">Telemetria</a>
-                <a href="#dev-p2">Payload 2 (Ambiental)</a>
-                <a href="#dev-aux">Telemetria Auxiliar</a>
-            </div>
-        </li>
-        <li><a href="#testes">Testes</a></li>
-        <li><a href="#dados">Dados</a></li>
-    </ul>
-</nav>
+    <a href="#noticias">Notícias</a> <a href="#missao">Missão</a> <a href="#testes">Testes</a> <a href="#dados">Dados</a> </nav>
 
 <div class="banner-container">
-    <img src="img/limiar3_logo.png" alt="Missão LIMIAR3" class="img-limiar">
-</div>
+    <img src="img/limiar3_logo.png" alt="Missão LIMIAR3" class="img-limiar"> </div>
 
 <section id="noticias">
-    <h2>Notícias</h2>
+    <h2>Notícias da Missão</h2> <div class="card">
+        <p><strong>[Site Atualizado]</strong> - A missão LIMIAR3 : KAIROS é um projeto experimental de exploração estratosférica desenvolvido por alunos dos ensinos básico (3º ciclo) e secundário...</p>
+    </div>
+
     <div class="card">
-        <p><strong>[28 maio 2026]</strong> - <strong>Lançamento do Novo Site</strong></p>
-        <p>A missão LIMIAR3 : KAIROS entra agora numa nova fase de divulgação digital.</p>
+        <p><strong>[28 maio 2026]</strong> - <strong>LIMIAR3</strong></p> <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 15px;">
+            <div style="flex: 2; min-width: 300px; text-align: justify;">
+                <p>A missão LIMIAR3 : KAIROS é um projeto experimental de exploração estratosférica...</p>
+                <p>Inspirada na investigação aeroespacial...</p>
+                <p>O nome KAIROS representa o “momento oportuno”...</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <img src="img/NOME_DA_TUA_IMAGEM.png" alt="Ilustração da notícia" style="width: 100%; border-radius: 8px; border: 1px solid #30363d;"> </div>
+        </div>
     </div>
 </section>
 
 <section id="missao">
-    <h2>A Missão</h2>
-    
-    <div id="obj-gerais" class="card">
-        <h3>Objetivos Gerais</h3>
-        <p>Exploração da estratosfera até 40km de altitude para estudo ambiental extremo.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_OBJETIVOS" class="btn-link btn-drive">📄 Relatório</a>
-            <a href="LINK_YOUTUBE_MISSAO" class="btn-link btn-youtube">▶ Vídeo</a>
-        </div>
-    </div>
-
-    <div id="m-payload1" class="card">
-        <h3>Missão: Payload 1</h3>
-        <p>Foco na recolha de dados atmosféricos primários.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_P1" class="btn-link btn-drive">📄 Documentação</a>
-        </div>
-    </div>
-
-    <div id="m-payload2" class="card">
-        <h3>Missão: Payload 2</h3>
-        <p>Foco em observação visual e redundância de dados.</p>
-    </div>
-</section>
-
-<section id="desenvolvimento">
-    <h2>Desenvolvimento</h2>
-    
-    <div id="dev-p1" class="card">
-        <h3>Payload 1 - Sistema Científico</h3>
-        <p>Desenvolvimento dos sensores de CO2, pressão e temperatura.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_CIENTIFICO" class="btn-link btn-drive">📄 Esquemas Técnicos</a>
-            <a href="LINK_YOUTUBE_P1" class="btn-link btn-youtube">▶ Teste de Bancada</a>
-        </div>
-    </div>
-
-    <div id="dev-telemetria" class="card">
-        <h3>Telemetria Principal</h3>
-        <p>Módulo de transmissão de dados em tempo real para a estação terrestre.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_TEL" class="btn-link btn-drive">📄 Código Fonte</a>
-        </div>
-    </div>
-
-    <div id="dev-p2" class="card">
-        <h3>Payload 2 - Sistema Ambiental</h3>
-        <p>Análise de partículas e monitorização de radiação.</p>
-        <div class="links-container">
-            <a href="LINK_YOUTUBE_P2" class="btn-link btn-youtube">▶ Review Sistema</a>
-        </div>
-    </div>
-
-    <div id="dev-aux" class="card">
-        <h3>Sistema de Telemetria Auxiliar</h3>
-        <p>Redundância de segurança para localização GPS e recuperação.</p>
-        <div class="links-container">
-            <a href="LINK_DRIVE_AUX" class="btn-link btn-drive">📄 Protocolos</a>
-        </div>
-    </div>
-</section>
-
-<section id="testes">
-    <h2>Testes</h2>
-    <div class="card"><p>Conteúdo em desenvolvimento sobre os testes de voo e vácuo.</p></div>
-</section>
-
-<section id="dados">
-    <h2>Dados</h2>
-    <div class="card"><p>Visualização de dados recolhidos em tempo real e históricos.</p></div>
-</section>
-
-<footer>
-    &copy; 2026 Missão LIMIAR3 - KAIROS | CATI
-</footer>
-
-</body>
-</html>
+    <h2>A Missão</h2> <p>O projeto LIMIAR
