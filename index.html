@@ -5,77 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIMIAR3 - KAIROS | Missão Aeroespacial</title>
     <style>
-        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
+        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; scroll-behavior: smooth; }
         
-        /* CABEÇALHO: Logotipos no topo e Título por baixo */
-        header { 
-            background: #161b22; 
-            padding: 30px 20px; 
-            border-bottom: 2px solid #58a6ff; 
-        }
-        .logos-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto 20px auto;
-        }
+        /* Cabeçalho solicitado: Logos no topo, Título por baixo */
+        header { background: #161b22; padding: 30px 20px; border-bottom: 2px solid #58a6ff; }
+        .logos-container { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto 20px auto; }
         .logo-header { max-height: 80px; width: auto; }
-        .header-title h1 { 
-            margin: 0; 
-            font-size: 2.2em; 
-            color: #58a6ff; 
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
+        .header-title h1 { margin: 0; font-size: 2.2em; color: #58a6ff; text-transform: uppercase; letter-spacing: 3px; }
 
-        /* NAVEGAÇÃO E SUBMENUS */
+        /* Navegação e Submenus */
         nav { position: sticky; top: 0; background: #161b22; border-bottom: 1px solid #30363d; z-index: 1000; }
         nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
         nav ul li { position: relative; }
         nav a { display: block; color: #c9d1d9; padding: 15px 25px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
         nav a:hover { color: #58a6ff; background: #1c2128; }
         
-        .submenu { 
-            display: none; 
-            position: absolute; 
-            background: #161b22; 
-            min-width: 260px; 
-            border: 1px solid #30363d; 
-            box-shadow: 0 8px 16px rgba(0,0,0,0.5); 
-            text-align: left;
-        }
+        .submenu { display: none; position: absolute; background: #161b22; min-width: 260px; border: 1px solid #30363d; box-shadow: 0 8px 16px rgba(0,0,0,0.5); text-align: left; }
         nav ul li:hover .submenu { display: block; }
-        .submenu a { border-bottom: 1px solid #30363d; padding: 12px 20px; text-transform: none; }
+        .submenu a { border-bottom: 1px solid #30363d; padding: 12px 20px; text-transform: none; font-size: 0.8em; }
         .submenu a:last-child { border-bottom: none; }
 
-        /* BANNER LOGO (ABAIXO DO MENU) */
-        .banner-logo {
-            width: 100%;
-            background: #0d1117;
-            padding: 30px 0;
-            display: flex;
-            justify-content: center;
-        }
-        .banner-logo img {
-            width: 90%;
-            max-width: 600px;
-            height: auto;
-            filter: drop-shadow(0 0 15px rgba(88, 166, 255, 0.3));
-        }
+        /* Imagem LIMIAR3 Logo abaixo do Menu */
+        .banner-logo { width: 100%; background: #0d1117; padding: 40px 0; display: flex; justify-content: center; }
+        .banner-logo img { width: 90%; max-width: 500px; height: auto; filter: drop-shadow(0 0 15px rgba(88, 166, 255, 0.4)); }
 
-        /* CONTEÚDO */
-        section { padding: 50px 20px; max-width: 900px; margin: auto; text-align: left; }
+        /* Secções e Cards */
+        section { padding: 60px 20px; max-width: 900px; margin: auto; text-align: left; }
         h2 { color: #58a6ff; border-left: 5px solid #58a6ff; padding-left: 15px; margin-bottom: 25px; text-transform: uppercase; }
         h3 { color: #c9d1d9; margin-top: 30px; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
         .card { background: #161b22; border: 1px solid #30363d; padding: 30px; border-radius: 8px; margin-bottom: 25px; line-height: 1.8; text-align: justify; }
         
-        /* BOTÕES */
         .links-container { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
         .btn-link { display: inline-flex; align-items: center; padding: 10px 16px; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.85em; transition: 0.3s; }
         .btn-drive { background: #238636; }
         .btn-youtube { background: #bb0000; }
-
         footer { padding: 50px; color: #8b949e; font-size: 0.85em; border-top: 1px solid #30363d; }
     </style>
 </head>
@@ -118,16 +81,13 @@
 </nav>
 
 <div class="banner-logo">
-    <img src="img/limiar3_logo.png" alt="Logo LIMIAR3">
+    <img src="img/limiar3_logo.png" alt="Logo Missão LIMIAR3">
 </div>
 
 <section id="noticias">
     <h2>Notícias</h2>
     <div class="card">
-        <p>O clube CATI, da Escola Secundária Carlos Amarante, em Braga, prepara o lançamento da missão estratosférica “LIMIAR3 : KAIROS”, um projeto científico e tecnológico desenvolvido por alunos do ensino básico (3º ciclo) e secundário, com o objetivo de levar investigação estudantil experimental portuguesa até cerca de 40 km de altitude.</p>
-        
-        <p>A missão utilizará um balão estratosférico de alta altitude capaz de transportar dois payloads científicos independentes através da troposfera e da estratosfera. A iniciativa integra áreas como engenharia aeroespacial experimental, sistemas embarcados, telecomunicações LoRa, monitorização ambiental e fotografia de alta altitude.</p>
-
+        <p>O clube CATI prepara o lançamento da missão estratosférica “LIMIAR3 : KAIROS”, um projeto desenvolvido por alunos do 3º ciclo e secundário para levar a investigação estudantil até cerca de 40 km de altitude.</p>
         <div class="links-container">
             <a href="#" class="btn-link btn-youtube">▶ Ver Reportagem</a>
             <a href="noticia.pdf" download class="btn-link btn-drive">📄 Notícia em PDF</a>
@@ -140,13 +100,57 @@
     
     <div id="missao-desc" class="card">
         <h3>Descrição Geral</h3>
-        <p>A missão <strong>LIMIAR3 : KAIROS</strong> é uma iniciativa de exploração aeroespacial estudantil que visa o lançamento de uma plataforma científica até à estratosfera superior. Através da utilização de um balão de hélio de alta altitude, a missão transportará sistemas eletrónicos avançados para recolher dados críticos sobre o ambiente próximo do espaço, servindo como uma plataforma de aprendizagem prática em engenharia aplicada, física atmosférica e comunicações de longo alcance.</p>
+        <p>A missão <strong>LIMIAR3 : KAIROS</strong> visa o lançamento de uma plataforma científica até à estratosfera superior para recolher dados críticos sobre o ambiente próximo do espaço.</p>
     </div>
 
     <div id="obj-gerais" class="card">
         <h3>Objetivos Gerais</h3>
-        <p>Os principais objetivos incluem a caracterização térmica de payloads, a construção de perfis verticais de temperatura e pressão, o estudo da radiação ultravioleta e a observação visual da curvatura da Terra.</p>
+        <p>Caracterização térmica de payloads, construção de perfis atmosféricos e observação da curvatura terrestre.</p>
     </div>
+
+    <div id="m-payload1" class="card">
+        <h3>Payload 1 (Científico)</h3>
+        <p>Estudo do comportamento térmico em ambiente extremo e dinâmica de voo.</p>
+    </div>
+
+    <div id="m-payload2" class="card">
+        <h3>Payload 2 (Ambiental)</h3>
+        <p>Monitorização da qualidade do ar e fotografia de alta altitude.</p>
+    </div>
+</section>
+
+<section id="desenvolvimento">
+    <h2>Desenvolvimento</h2>
+    
+    <div id="dev-p1" class="card">
+        <h3>Payload 1 - Instrumentação</h3>
+        <p>Sensores atmosféricos e unidades de medição inercial.</p>
+    </div>
+
+    <div id="dev-tel" class="card">
+        <h3>Telemetria e LoRa</h3>
+        <p>Comunicação de longo alcance em tempo real.</p>
+    </div>
+
+    <div id="dev-p2" class="card">
+        <h3>Payload 2 - Sensores e Imagem</h3>
+        <p>Câmaras de alta resolução e sensores UV.</p>
+    </div>
+
+    <div id="dev-aux" class="card">
+        <h3>Sistemas de Recuperação e GPS</h3>
+        <p>Rastreamento para localização pós-aterragem.</p>
+    </div>
+</section>
+
+<section id="testes">
+    <h2>Testes</h2>
+    <div class="card"><p>Documentação dos ensaios térmicos e testes de alcance.</p></div>
+</section>
+
+<section id="dados">
+    <h2>Dados</h2>
+    <div class="card"><p>Repositório de dados científicos da missão.</p></div>
 </section>
 
 <footer>
